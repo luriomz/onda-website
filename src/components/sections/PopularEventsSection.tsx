@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import { viewportOnce } from "../../hooks/useScrollAnimation";
 
 const CITIES = [
@@ -114,8 +114,8 @@ export default function PopularEventsSection() {
         </a>
       </motion.div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+      {/* Card grid — 2 cols desktop, 1 col mobile */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
         {EVENTS.map((event, index) => (
           <EventCard key={event.id} event={event} index={index} />
         ))}
@@ -140,45 +140,111 @@ function EventCard({
     >
       <a
         href="#"
-        className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] rounded-card"
+        className="group relative block overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
         aria-label={`Ver ${event.name}`}
+        style={{
+          borderRadius: "16px",
+          border: "1px solid rgba(255,255,255,0.08)",
+        }}
       >
-        {/* Image */}
-        <div className="aspect-[3/4] overflow-hidden rounded-card">
+        {/* ── Full-bleed image ── */}
+        <div className="aspect-[3/4] overflow-hidden">
           <img
             src={event.image}
             alt={event.name}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="h-full w-full object-cover transition-transform duration-500 will-change-transform"
+            style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}
+            onMouseEnter={(e) =>
+              ((e.currentTarget as HTMLImageElement).style.transform =
+                "scale(1.05)")
+            }
+            onMouseLeave={(e) =>
+              ((e.currentTarget as HTMLImageElement).style.transform =
+                "scale(1)")
+            }
             loading="lazy"
           />
         </div>
 
-        {/* Info */}
-        <div className="mt-3 space-y-1.5 px-1">
-          <h3 className="font-display text-[18px] font-semibold text-white line-clamp-2 leading-tight">
-            {event.name}
-          </h3>
-          <p className="font-sans text-[13px] text-[hsl(var(--text-muted))]">{event.venue}</p>
+        {/* ── Pink border glow on hover ── */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-[16px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            boxShadow:
+              "inset 0 0 0 1px hsl(338 80% 55% / 0.45), 0 0 48px hsl(338 80% 55% / 0.1)",
+          }}
+        />
 
-          {/* Date row */}
-          <div className="flex items-center gap-2 font-sans text-[13px]">
-            <span className="font-semibold text-[hsl(var(--accent))]">{event.date}</span>
-            <span className="text-[hsl(var(--border-active))]">|</span>
-            <span className="text-[hsl(var(--text-muted))]">{event.time}</span>
-            <span className="text-[hsl(var(--border-active))]">|</span>
-            <span className="font-semibold text-white">{event.price}</span>
-          </div>
+        {/* ── Glassmorphism genre tags — top-left ── */}
+        <div className="absolute left-3 top-3 z-10 flex flex-wrap gap-1.5">
+          {event.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-pill font-sans text-[10px] font-semibold uppercase tracking-wider text-white"
+              style={{
+                padding: "4px 10px",
+                background: "rgba(10, 8, 20, 0.55)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                border: "1px solid rgba(255,255,255,0.18)",
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-1.5 pt-0.5">
-            {event.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-pill border border-[hsl(var(--border-active))] px-2.5 py-0.5 font-sans text-[11px] font-medium uppercase tracking-wide text-[hsl(var(--text-muted))]"
-              >
-                {tag}
+        {/* ── "Ver detalhes" badge — top-right, appears on hover ── */}
+        <div
+          aria-hidden
+          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full opacity-0 transition-all duration-300 group-hover:opacity-100"
+          style={{
+            background: "hsl(338 80% 55%)",
+            boxShadow: "0 4px 16px hsl(338 80% 55% / 0.45)",
+          }}
+        >
+          <ArrowUpRight className="h-4 w-4 text-white" />
+        </div>
+
+        {/* ── Cinematic gradient overlay + info ── */}
+        <div
+          className="absolute inset-0 flex flex-col justify-end p-5"
+          style={{
+            background:
+              "linear-gradient(to top, hsl(250 12% 3% / 0.98) 0%, hsl(250 12% 5% / 0.72) 38%, transparent 62%)",
+          }}
+        >
+          <div className="space-y-1.5">
+            <h3
+              className="font-display font-semibold text-white line-clamp-2 leading-tight"
+              style={{ fontSize: "clamp(16px, 2.2vw, 19px)" }}
+            >
+              {event.name}
+            </h3>
+
+            <p className="font-sans text-[12px] text-[hsl(var(--text-muted))]">
+              {event.venue}
+            </p>
+
+            {/* Date / time / price row */}
+            <div className="flex items-center gap-2 pt-1 font-sans text-[12px]">
+              <span className="font-semibold text-[hsl(var(--accent))]">
+                {event.date}
               </span>
-            ))}
+              <span
+                aria-hidden
+                className="h-[3px] w-[3px] rounded-full bg-[hsl(250_8%_35%)]"
+              />
+              <span className="text-[hsl(var(--text-muted))]">{event.time}</span>
+              <span
+                aria-hidden
+                className="h-[3px] w-[3px] rounded-full bg-[hsl(250_8%_35%)]"
+              />
+              <span className="ml-auto font-semibold text-white">
+                {event.price}
+              </span>
+            </div>
           </div>
         </div>
       </a>
