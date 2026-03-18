@@ -1,9 +1,9 @@
 import { Apple, Play } from "lucide-react";
 
 const LINKS = {
-  ABOUT: ["Our Story", "Press", "Careers", "Blog"],
-  EXPLORE: ["Maputo", "Beira", "Nampula", "All Cities"],
-  SUPPORT: ["Help Centre", "Contact Us", "Refund Policy", "Accessibility"],
+  SOBRE: ["A Nossa História", "Imprensa", "Carreiras", "Blog"],
+  EXPLORAR: ["Maputo", "Beira", "Nampula", "Todas as Cidades"],
+  SUPORTE: ["Centro de Ajuda", "Contacta-nos", "Política de Reembolso", "Acessibilidade"],
 };
 
 // Inline SVG icons to avoid external deps
@@ -60,7 +60,7 @@ export default function Footer() {
             href="#"
             className="inline-flex min-h-[44px] items-center rounded-[6px] border border-[hsl(var(--border-active))] px-5 py-2 font-sans text-sm font-semibold text-white transition-colors hover:border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
           >
-            LIST YOUR EVENT ↗
+            PUBLICAR O TEU EVENTO ↗
           </a>
         </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
           {/* App download */}
           <div className="col-span-2 sm:col-span-1">
             <h3 className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-[hsl(var(--text-muted))]">
-              Join the Community
+              Junta-te à Comunidade
             </h3>
             <div className="mt-4 flex flex-col gap-2">
               <button className="flex min-h-[44px] items-center gap-2 rounded-pill border border-[hsl(var(--border-active))] bg-[hsl(var(--bg-surface))] px-4 py-2 font-sans text-sm font-semibold text-white transition-colors hover:bg-[hsl(var(--bg-elevated))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]">
@@ -104,7 +104,7 @@ export default function Footer() {
           {/* Social */}
           <div className="col-span-2 sm:col-span-1">
             <h3 className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-[hsl(var(--text-muted))]">
-              We Are Social :)
+              Somos Sociais :)
             </h3>
             <div className="mt-4 flex flex-wrap gap-3">
               {SOCIALS.map(({ label, icon: Icon }) => (
@@ -124,10 +124,10 @@ export default function Footer() {
         {/* Legal bar */}
         <div className="mt-12 flex flex-col gap-3 border-t border-[hsl(var(--border-subtle))] pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-sans text-[11px] text-[hsl(var(--text-muted))]">
-            &copy; 2026 Onda. All rights reserved.
+            &copy; 2026 Onda. Todos os direitos reservados.
           </p>
           <nav className="flex gap-4" aria-label="Legal">
-            {["Terms", "Privacy", "Cookies"].map((item) => (
+            {["Termos", "Privacidade", "Cookies"].map((item) => (
               <a
                 key={item}
                 href="#"

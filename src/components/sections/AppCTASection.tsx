@@ -28,11 +28,11 @@ export default function AppCTASection() {
             className="font-display mx-auto max-w-[680px] font-bold uppercase text-white"
             style={{ fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1.05 }}
           >
-            Looking to Go Out?
+            Queres Sair?
             <br />
-            All the Events You Love
+            Todos os Eventos que Adoras
             <br />
-            Are Right There!
+            Estão Mesmo Aqui!
           </motion.h2>
 
           <motion.div
@@ -46,7 +46,7 @@ export default function AppCTASection() {
               onClick={() => setModalOpen(true)}
               className="min-h-[48px] rounded-pill border-2 border-[hsl(var(--accent))] px-8 py-3 font-sans text-sm font-semibold text-[hsl(var(--accent-glow))] transition-all duration-150 hover:bg-[hsl(var(--accent))] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
             >
-              GET THE ONDA APP
+              BAIXA O ONDA
             </button>
           </motion.div>
         </div>
@@ -64,7 +64,7 @@ export default function AppCTASection() {
             onClick={() => setModalOpen(false)}
             role="dialog"
             aria-modal="true"
-            aria-label="Download Onda App"
+            aria-label="Baixar a App Onda"
           >
             <div
               className="absolute inset-0 bg-[hsl(250 12% 3% / 0.85)] backdrop-blur-sm"
@@ -81,15 +81,15 @@ export default function AppCTASection() {
               <button
                 className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full text-[hsl(var(--text-muted))] transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
                 onClick={() => setModalOpen(false)}
-                aria-label="Close"
+                aria-label="Fechar"
               >
                 <X className="h-5 w-5" />
               </button>
 
               <img src="/onda-icon.svg" alt="Onda" className="mx-auto mb-4 h-14 w-14" />
-              <h3 className="font-display text-xl font-bold text-white">Download Onda</h3>
+              <h3 className="font-display text-xl font-bold text-white">Baixa o Onda</h3>
               <p className="mt-2 font-sans text-sm text-[hsl(var(--text-muted))]">
-                Scan the QR code or choose your platform
+                Lê o QR code ou escolhe a tua plataforma
               </p>
 
               {/* QR code placeholder */}

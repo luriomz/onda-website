@@ -12,7 +12,7 @@ const ARTISTS = [
 
 export default function ArtistsMarquee() {
   return (
-    <section className="border-t border-[hsl(var(--border-subtle))]" aria-label="Featured Artists">
+    <section className="border-t border-[hsl(var(--border-subtle))]" aria-label="Artistas em Destaque">
       <div className="mx-auto max-w-[1200px] px-5 md:px-8">
         <motion.div
           className="py-6"
@@ -22,7 +22,7 @@ export default function ArtistsMarquee() {
           transition={{ duration: 0.4 }}
         >
           <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-[hsl(var(--text-muted))]">
-            Featured Artists
+            Artistas em Destaque
           </p>
         </motion.div>
 
@@ -38,7 +38,7 @@ export default function ArtistsMarquee() {
               <a
                 href="#"
                 className="group flex items-center justify-between border-t border-[hsl(var(--border-subtle))] py-5 transition-colors hover:bg-[hsl(var(--bg-surface))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] rounded-sm px-2 -mx-2"
-                aria-label={`View ${artist.name}`}
+                aria-label={`Ver ${artist.name}`}
               >
                 <span
                   className="font-display font-bold text-white transition-colors group-hover:text-[hsl(var(--accent-glow))]"

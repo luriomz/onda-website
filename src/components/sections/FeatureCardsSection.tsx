@@ -3,18 +3,18 @@ import { viewportOnce } from "../../hooks/useScrollAnimation";
 
 const CARDS = [
   {
-    label: "Discover",
-    heading: "Discover Events Near You",
-    body: "Browse curated events across Maputo, Beira & Nampula. Filter by genre, date, or mood. Your next favourite night out is one tap away.",
+    label: "Descobre",
+    heading: "Descobre Eventos Perto de Ti",
+    body: "Explora eventos seleccionados em Maputo, Beira e Nampula. Filtra por género, data ou humor. A tua próxima noite favorita está a um toque de distância.",
     image: "/hero-1.jpg",
-    alt: "Onda event discovery feed",
+    alt: "Feed de descoberta de eventos Onda",
   },
   {
-    label: "Your Tickets",
-    heading: "Your Tickets, Always Ready",
-    body: "Tickets live in your pocket. Tap to show your QR code at the door. No printing, no waiting — just show up and get in.",
+    label: "Os Teus Bilhetes",
+    heading: "Os Teus Bilhetes, Sempre Prontos",
+    body: "Os bilhetes vivem no teu bolso. Toca para mostrar o teu QR code na entrada. Sem impressão, sem espera — aparece e entra.",
     image: "/hero-4.jpg",
-    alt: "Onda ticket QR code screen",
+    alt: "Ecrã de QR code do bilhete Onda",
   },
 ];
 

@@ -52,7 +52,7 @@ export default function HeroSection() {
         {/* Label pill */}
         <motion.div {...entrance(0.05)}>
           <span className="inline-flex items-center rounded-pill border border-[hsl(var(--border-active))] px-4 py-1.5 font-sans text-[11px] font-semibold tracking-editorial text-[hsl(var(--text-muted))] uppercase">
-            Mozambique&apos;s #1 Event App
+            A App Nº1 de Eventos em Moçambique
           </span>
         </motion.div>
 
@@ -62,9 +62,9 @@ export default function HeroSection() {
           className="font-display max-w-4xl font-bold uppercase leading-[0.95] tracking-tight text-white"
           style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
         >
-          Grab Your Ticket,
+          Compra o Teu Bilhete,
           <br />
-          Make Memories.
+          Cria Memórias.
         </motion.h1>
 
         {/* Subtitle */}
@@ -72,21 +72,21 @@ export default function HeroSection() {
           {...entrance(0.18)}
           className="max-w-md font-sans text-[17px] leading-relaxed text-[hsl(var(--text-muted))]"
         >
-          Find the best events in Maputo. Buy tickets with M-Pesa. Download Onda.
+          Encontra os melhores eventos em Maputo. Compra bilhetes com M-Pesa. Baixa o Onda.
         </motion.p>
 
         {/* App store buttons */}
         <motion.div {...entrance(0.24)} className="flex flex-wrap items-center justify-center gap-3">
           <button
             className="flex min-h-[48px] items-center gap-2.5 rounded-pill border border-[hsl(var(--border-active))] bg-[hsl(var(--bg-surface))] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[hsl(var(--bg-elevated))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
-            aria-label="Download on the App Store"
+            aria-label="Baixar na App Store"
           >
             <Apple className="h-5 w-5" />
             App Store
           </button>
           <button
             className="flex min-h-[48px] items-center gap-2.5 rounded-pill border border-[hsl(var(--border-active))] bg-[hsl(var(--bg-surface))] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[hsl(var(--bg-elevated))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))]"
-            aria-label="Get it on Google Play"
+            aria-label="Disponível no Google Play"
           >
             <Play className="h-4 w-4 fill-white" />
             Google Play
@@ -96,12 +96,12 @@ export default function HeroSection() {
         {/* Rating row */}
         <motion.div {...entrance(0.3)} className="flex items-center gap-2">
           <span className="font-display text-sm font-bold text-white">4.9</span>
-          <div className="flex" aria-label="5 stars">
+          <div className="flex" aria-label="5 estrelas">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="h-3.5 w-3.5 fill-[hsl(var(--accent))] text-[hsl(var(--accent))]" />
             ))}
           </div>
-          <span className="font-sans text-[13px] text-[hsl(var(--text-muted))]">50K+ ratings</span>
+          <span className="font-sans text-[13px] text-[hsl(var(--text-muted))]">50K+ avaliações</span>
         </motion.div>
       </div>
 

@@ -14,27 +14,27 @@ const EVENTS = [
     id: "1",
     name: "Sunset Beach Rave",
     venue: "Praia da Costa do Sol, Maputo",
-    date: "SAT 22 MAR",
+    date: "SÁB 22 MAR",
     time: "20:00",
     price: "500 MZN",
-    tags: ["Nightlife", "Electronic"],
+    tags: ["Vida Noturna", "Electrónica"],
     image: "/event-1.jpg",
   },
   {
     id: "2",
     name: "Afro House Sessions",
     venue: "Club Miramar, Maputo",
-    date: "FRI 28 MAR",
+    date: "SEX 28 MAR",
     time: "22:00",
     price: "300 MZN",
-    tags: ["Music", "Afro House"],
+    tags: ["Música", "Afro House"],
     image: "/event-2.jpg",
   },
   {
     id: "3",
     name: "Maputo Jazz Festival",
     venue: "Jardim dos Professores",
-    date: "SUN 30 MAR",
+    date: "DOM 30 MAR",
     time: "17:00",
     price: "800 MZN",
     tags: ["Festival", "Jazz"],
@@ -44,10 +44,10 @@ const EVENTS = [
     id: "4",
     name: "Polana Beach Vibes",
     venue: "Polana Beach Club",
-    date: "SAT 5 APR",
+    date: "SÁB 5 ABR",
     time: "16:00",
     price: "400 MZN",
-    tags: ["Beach Party", "Live Music"],
+    tags: ["Festa de Praia", "Música ao Vivo"],
     image: "/event-4.jpg",
   },
 ];
@@ -70,7 +70,7 @@ export default function PopularEventsSection() {
           className="font-display font-bold uppercase text-white"
           style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
         >
-          Popular Events In{" "}
+          Eventos Populares Em{" "}
           <span className="relative inline-block">
             <button
               className="inline-flex items-center gap-1.5 text-[hsl(var(--accent))] focus:outline-none focus-visible:underline"
@@ -110,7 +110,7 @@ export default function PopularEventsSection() {
           href="#"
           className="flex items-center gap-1.5 text-sm font-semibold text-[hsl(var(--accent))] hover:underline focus:outline-none focus-visible:underline"
         >
-          MORE EVENTS <ArrowRight className="h-4 w-4" />
+          MAIS EVENTOS <ArrowRight className="h-4 w-4" />
         </a>
       </motion.div>
 
@@ -141,7 +141,7 @@ function EventCard({
       <a
         href="#"
         className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] rounded-card"
-        aria-label={`View ${event.name}`}
+        aria-label={`Ver ${event.name}`}
       >
         {/* Image */}
         <div className="aspect-[3/4] overflow-hidden rounded-card">
