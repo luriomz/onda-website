@@ -1,17 +1,13 @@
-# MUVUE
+# Clean Slate App
 
-Descobre eventos, compra bilhetes e vive a melhor vida nocturna de Moçambique.
+A minimal React + Vite + Tailwind starter for rebuilding this project from scratch.
 
-## Tech Stack
-
-- Vite + React + TypeScript
-- shadcn-ui + Tailwind CSS
-- Supabase
-- TanStack Query + Zustand
-
-## Getting Started
+## Commands
 
 ```sh
-npm install
-npm run dev
+pnpm install
+pnpm dev
+pnpm build
+pnpm test
+pnpm lint
 ```
