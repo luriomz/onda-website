@@ -23,3 +23,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dev tooling / Claude skills — not part of the website source
+ui-ux-pro-max-skill/
+BUILDPLAN.md
+INSTRUCTION.md
+
+# Claude local config
+.claude/
