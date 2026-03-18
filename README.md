@@ -34,15 +34,14 @@ pnpm test
 
 The repo is fully documented for AI-assisted development. Read these before making changes:
 
-| File | What it covers |
-|------|----------------|
-| [`CLAUDE.md`](./CLAUDE.md) | Full project guide — stack, design tokens, conventions, asset map |
-| [`BUILDPLAN.md`](./BUILDPLAN.md) | Section-by-section build specs and animation reference |
-| [`INSTRUCTION.md`](./INSTRUCTION.md) | How to use the ui-ux-pro-max design skill + Magic MCP together |
-| [`src/CONTEXT.md`](./src/CONTEXT.md) | Source directory map and quick-reference |
-| [`src/components/sections/CONTEXT.md`](./src/components/sections/CONTEXT.md) | Per-section specs, data shapes, animation details |
-| [`src/components/layout/CONTEXT.md`](./src/components/layout/CONTEXT.md) | Navbar and Footer specs |
-| [`src/hooks/CONTEXT.md`](./src/hooks/CONTEXT.md) | Animation hook usage and patterns |
+| File                                                                         | What it covers                                                    |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [`CLAUDE.md`](./CLAUDE.md)                                                   | Full project guide — stack, design tokens, conventions, asset map |
+| [`INSTRUCTION.md`](./INSTRUCTION.md)                                         | How to use the ui-ux-pro-max design skill + Magic MCP together    |
+| [`src/CONTEXT.md`](./src/CONTEXT.md)                                         | Source directory map and quick-reference                          |
+| [`src/components/sections/CONTEXT.md`](./src/components/sections/CONTEXT.md) | Per-section specs, data shapes, animation details                 |
+| [`src/components/layout/CONTEXT.md`](./src/components/layout/CONTEXT.md)     | Navbar and Footer specs                                           |
+| [`src/hooks/CONTEXT.md`](./src/hooks/CONTEXT.md)                             | Animation hook usage and patterns                                 |
 
 Start with `CLAUDE.md` if you're new to the repo.
 
